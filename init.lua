@@ -21,11 +21,13 @@ just gimme creds yo
 
 minetest.register_node("ghostblocks:dirt", {
 walkable=false,
-tiles="default_dirt.png"
+tiles={"default_dirt.png"},
+drop = 'ghostblocks:dirt',
 })
 minetest.register_node("ghostblocks:dirt_with_grass", {
 walkable=false,
-tiles="default_grass.png"
+tiles={"default_grass.png"},
+drop = 'ghostblocks:dirt_with_grass',
 })
 minetest.register_node("ghostblocks:clay", {
 walkable=false,
