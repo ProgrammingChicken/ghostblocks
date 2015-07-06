@@ -31,39 +31,39 @@ drop = 'ghostblocks:dirt_with_grass',
 })
 minetest.register_node("ghostblocks:clay", {
 walkable=false,
-tiles="default_clay.png"
+tiles={"default_clay.png"},
 })
 minetest.register_node("ghostblocks:sand", {
 walkable=false,
-tiles="default_sand.png"
+tiles={"default_sand.png"},
 })
 minetest.register_node("ghostblocks:stone", {
 walkable=false,
-tiles="default_stone.png"
+tiles={"default_stone.png"},
 })
 minetest.register_node("ghostblocks:stone_with_iron", {
 walkable=false,
-tiles="default_stone.png^default_mineral_iron.png"
+tiles={"default_stone.png^default_mineral_iron.png"},
 })
 minetest.register_node("ghostblocks:stone_with_coal", {
 walkable=false,
-tiles="default_stone.png^default_mineral_coal.png"
+tiles={"default_stone.png^default_mineral_coal.png"},
 })
 minetest.register_node("ghostblocks:stone_with_diamond", {
 walkable=false,
-tiles="default_stone.png^default_mineral_diamond.png"
+tiles={"default_stone.png^default_mineral_diamond.png"},
 })
 minetest.register_node("ghostblocks:stone_with_mese", {
 walkable=false,
-tiles="default_stone.png^default_mineral_mese.png"
+tiles={"default_stone.png^default_mineral_mese.png"},
 })
 minetest.register_node("ghostblocks:mossycobble", {
 walkable=false,
-tiles="default_mossycobble.png"
+tiles={"default_mossycobble.png"},
 })
 minetest.register_node("ghostblocks:cobble", {
 walkable=false,
-tiles="default_cobble.png"
+tiles={"default_cobble.png"},
 })
 --[[
 minetest.register_node("ghostblocks:ghost_converter"{
