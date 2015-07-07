@@ -99,8 +99,8 @@ groups = {cracky=3, stone=1},
 --[[
 minetest.register_node("ghostblocks:ghost_converter"{
 walkable=true,
-on_right_click=function()
+on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+show_formspec(player, "ghostblocks:ghost-converter", "size[8,9;]"..
 
-end
-})
+)end})
 ]]--
