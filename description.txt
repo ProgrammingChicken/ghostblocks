@@ -1,0 +1,18 @@
+~ghostblocks~
+Code by ProgrammingChicken
+Uses textures from enabled texture pack.
+ghostblocks are blocks which you can walk through.
+you craft them using the ghost-converter.
+g-converter converts regular blocks into ghostblocks with fuel and "ghost-essence"
+g-essence is obtained by digging coal and stone.
+coal gives 0.1 g-essence
+stone gives 0.05 g-essence
+to convert one block you need 15 g-essence and 4 seconds of fuel.
+so you would need to dig 300 stone or 150 coal to make one.
+very expensive, but *realistic*.
+~ghostblocks~
+
++=ATTENTION=+
+This only supports blocks in default_game and my mods.
+Feel free to fork this mod.
+just gimme creds yo
