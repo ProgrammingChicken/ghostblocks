@@ -32,7 +32,7 @@ texture={"dirt", "dirt_with_grass", "clay", "sand", "gravel", "cobble", "mossyco
 leng = table.getn(block)
 
 --node registration loop
-for i in leng do
+for i=1, leng do
   minetest.register_node("ghostblocks:"..block[i], {
   walkable=false,
   tiles={"default_"..texture[i]},
