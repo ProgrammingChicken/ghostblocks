@@ -37,8 +37,8 @@ for i=1, 30 do
   end
   minetest.register_node("ghostblocks:"..block[i], {
   walkable=false,
-  tiles={"default_"..texture[i]},
-  drop = "ghostblocks:"..block[i]..".png",
+  tiles={"default_"..texture[i]..".png"},
+  drop = "ghostblocks:"..block[i],
   diggable = true,
   groups = {cracky=3, stone=1},
   })
