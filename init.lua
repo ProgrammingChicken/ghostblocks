@@ -14,6 +14,7 @@ Surround smoot-stone in compressed dirt, and you get a natural block.
 Looks like crap, yet it's very useful.
 put it in by itself and you get 3 ghost-essence.
 to convert one block you need 15 g-essence.
+an alternative way is to put potatoblocks from my potato mod in as fuel.
 ~ghostblocks~
 
 +=ATTENTION=+
@@ -47,16 +48,144 @@ end
 --ghost-essence materials
 minetest.register_node("ghostblocks:dirty_smoot", {
   walkable=true,
-  tiles={"ghostblocks_dirty_smoot"},
+  tiles={"ghostblocks_dirty_smoot.png"},
   drop="ghostblocks:dirty_smoot",
   diggable=true,
   groups={cracky=3, stone=1},
-  desc="Dirty Smoot",
+  description="Dirty Smoot",
 })
---[[minetest.register_node("ghostblocks:smootstone", {
-  walkable
-})]]--
+minetest.register_node("ghostblocks:sandy_smoot", {
+  walkable=true,
+  tiles={"ghostblocks_sandy_smoot.png"},
+  drop="ghostblocks:sandy_smoot",
+  diggable=true,
+  groups={cracky=3, stone=1},
+  description="Sandy Smoot",
+})
+minetest.register_node("ghostblocks:compressed_dirt", {
+  walkable=true,
+  tiles={"ghostblocks_compressed_dirt.png"},
+  drop="ghostblocks:compressed_dirt",
+  diggable=true,
+  groups={cracky=3, stone=1, oddly_breakable_by_hand=5, compressedghost=1,},
+  description="Compressed Dirt",
+})
+minetest.register_node("ghostblocks:compressed_sand", {
+  walkable=true,
+  tiles={"ghostblocks_compressed_sand.png"},
+  drop="ghostblocks:compressed_sand",
+  diggable=true,
+  groups={cracky=3, stone=1, oddly_breakable_by_hand=5, compressedghost=1,},
+  description="Compressed Sand",
+})
+minetest.register_node("ghostblocks:compressed_stone", {
+  walkable=true,
+  tiles={"ghostblocks_compressed_stone.png"},
+  drop="ghostblocks:compressed_stone",
+  diggable=true,
+  groups={cracky=3, stone=1},
+  description="Compressed Stone",
+})
+minetest.register_node("ghostblocks:compressed_desert_stone", {
+  walkable=true,
+  tiles={"default_desert_stone.png"},
+  drop="ghostblocks:compressed_desertstone",
+  diggable=true,
+  groups={cracky=3, stone=1},
+  description="Compressed Desert Stone",
+})
+minetest.register_node("ghostblocks:smoot_stone", {
+  walkable=true,
+  tiles={"ghostblocks_smoot-stone.png"},
+  drop="ghostblocks:smoot_stone",
+  diggable=true,
+  groups={cracky=3, stone=1, smoot_stone=1},
+  description="Smoot Stone",
+})
+minetest.register_node("ghostblocks:smoot_desert_stone", {
+  walkable=true,
+  tiles={"ghostblocks_smoot_desert_stone.png"},
+  drop="ghostblocks:smoot_desert_stone",
+  diggable=true,
+  groups={cracky=3, stone=1, smoot_stone=1,},
+  description="Smoot Desert Stone",
+})
+minetest.register_node("ghostblocks:natural", {
+  walkable=true,
+  tiles={"ghostblocks_natural.png"},
+  drop="ghostblocks:natural",
+  diggable=true,
+  groups={cracky=3, stone=1},
+  description="Pure Nature",
+})
+minetest.register_craftitem("ghostblocks:g_essence", {
+  inventory_image="ghostblocks_g_essence.png",
+  wield_image="ghostblocks_g_essence.png",
+  description="Ghost Essence",
+  stack_max=30,
+})
 --ghost-essence recipes
+minetest.register_craft(
+  type="",
+  output="ghostblocks:compressed_dirt",
+  {{"default:dirt","default:dirt","default:dirt"},
+  {"default:dirt","default:dirt","default:dirt"},
+  {"default:dirt","default:dirt","default:dirt"},
+},)
+minetest.register_craft(
+  type="",
+  output="ghostblocks:compressed_sand",
+  {{"default:sand","default:sand","default:sand"},
+  {"default:sand","default:sand","default:sand"},
+  {"default:sand","default:sand","default:sand"},
+},)
+minetest.register_craft(
+  type="",
+  output="ghostblocks:compressed_stone",
+  {{"default:stone","default:stone","default:stone"},
+  {"default:stone","default:stone","default:stone"},
+  {"default:stone","default:stone","default:stone"},
+},)
+minetest.register_craft(
+  type="",
+  output="ghostblocks:compressed_desertstone",
+  {{"default:desert_stone","default:desert_stone","default:desert_stone"},
+  {"default:desert_stone","default:desert_stone","default:desert_stone"},
+  {"default:desert_stone","default:desert_stone","default:desert_stone"},
+},)
+minetest.register_craft(
+  type="",
+  output="ghostblocks:dirty_smoot",
+  {{"default:dirt","default:dirt","default:dirt"},
+  {"default:dirt","default:coalblock","default:dirt"},
+  {"default:dirt","default:dirt","default:dirt"},
+},)
+minetest.register_craft(
+  type="",
+  output="ghostblocks:sandy_smoot",
+  {{"default:sand","default:sand","default:sand"},
+  {"default:sand","default:coalblock","default:sand"},
+  {"default:sand","default:sand","default:sand"},
+},)
+minetest.register_craft(
+  type="",
+  output="ghostblocks:compressed_stone",
+  {{"default:stone","default:stone","default:stone"},
+  {"default:stone","default:stone","default:stone"},
+  {"default:stone","default:stone","default:stone"}
+})
+minetest.register_craft(
+  type="",
+  output="ghostblocks:nature",
+  {{"group:compressedghost","group:compressedghost","group:compressedghost"},
+  {"group:compressedghost","group:smoot_stone","group:compressedghost"},
+  {"group:compressedghost","group:compressedghost","group:compressedghost"},
+},)
+minetest.register_craft(
+  type="shapeless",
+  output="ghostblocks:g-essence",
+  {"ghostblocks:natural"},
+)
 --[[
 minetest.register_node("ghostblocks:ghost_converter"{
 walkable=true,
