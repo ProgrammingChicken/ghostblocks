@@ -23,7 +23,7 @@ just gimme creds yo
 ]]--
 --shortcuts
 b="stone_with_"
-t="stone^default_mineral_"
+t="stone.png^default_mineral_"
 l="block"
 
 --reference
