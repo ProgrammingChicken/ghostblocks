@@ -168,7 +168,7 @@ minetest.register_craft({
   {"default:stone","default:stone","default:stone"}
 }})
 minetest.register_craft({
-  output="ghostblocks:nature",
+  output="ghostblocks:natural",
   recipe = {{"group:compressedghost","group:compressedghost","group:compressedghost"},
   {"group:compressedghost","group:smoot_stone","group:compressedghost"},
   {"group:compressedghost","group:compressedghost","group:compressedghost"},
