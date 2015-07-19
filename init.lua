@@ -175,7 +175,7 @@ minetest.register_craft({
 }})
 minetest.register_craft({
   type="shapeless",
-  output="ghostblocks:g-essence",
+  output="ghostblocks:g_essence",
   recipe = {"ghostblocks:natural"},
 })
 --[[
