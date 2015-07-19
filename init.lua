@@ -64,7 +64,7 @@ minetest.register_node("ghostblocks:sandy_smoot", {
 })
 minetest.register_node("ghostblocks:compressed_dirt", {
   walkable=true,
-  tiles={"ghostblocks_compressed_dirt.png"},
+  tiles={"default_dirt.png"},
   drop="ghostblocks:compressed_dirt",
   diggable=true,
   groups={cracky=3, stone=1, oddly_breakable_by_hand=5, compressedghost=1,},
@@ -72,7 +72,7 @@ minetest.register_node("ghostblocks:compressed_dirt", {
 })
 minetest.register_node("ghostblocks:compressed_sand", {
   walkable=true,
-  tiles={"ghostblocks_compressed_sand.png"},
+  tiles={"default_sand.png"},
   drop="ghostblocks:compressed_sand",
   diggable=true,
   groups={cracky=3, stone=1, oddly_breakable_by_hand=5, compressedghost=1,},
@@ -80,7 +80,7 @@ minetest.register_node("ghostblocks:compressed_sand", {
 })
 minetest.register_node("ghostblocks:compressed_stone", {
   walkable=true,
-  tiles={"ghostblocks_compressed_stone.png"},
+  tiles={"default_stone.png"},
   drop="ghostblocks:compressed_stone",
   diggable=true,
   groups={cracky=3, stone=1},
@@ -96,7 +96,7 @@ minetest.register_node("ghostblocks:compressed_desert_stone", {
 })
 minetest.register_node("ghostblocks:smoot_stone", {
   walkable=true,
-  tiles={"ghostblocks_smoot-stone.png"},
+  tiles={"ghostblocks_smoot_stone.png"},
   drop="ghostblocks:smoot_stone",
   diggable=true,
   groups={cracky=3, stone=1, smoot_stone=1},
@@ -128,63 +128,63 @@ minetest.register_craftitem("ghostblocks:g_essence", {
 minetest.register_craft({
   type="",
   output="ghostblocks:compressed_dirt",
-  {{"default:dirt","default:dirt","default:dirt"},
+  recipe = {{"default:dirt","default:dirt","default:dirt"},
   {"default:dirt","default:dirt","default:dirt"},
   {"default:dirt","default:dirt","default:dirt"},
 }})
 minetest.register_craft({
   type="",
   output="ghostblocks:compressed_sand",
-  {{"default:sand","default:sand","default:sand"},
+  recipe = {{"default:sand","default:sand","default:sand"},
   {"default:sand","default:sand","default:sand"},
   {"default:sand","default:sand","default:sand"},
 }})
 minetest.register_craft({
   type="",
   output="ghostblocks:compressed_stone",
-  {{"default:stone","default:stone","default:stone"},
+  recipe = {{"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"},
 }})
 minetest.register_craft({
   type="",
   output="ghostblocks:compressed_desertstone",
-  {{"default:desert_stone","default:desert_stone","default:desert_stone"},
+  recipe = {{"default:desert_stone","default:desert_stone","default:desert_stone"},
   {"default:desert_stone","default:desert_stone","default:desert_stone"},
   {"default:desert_stone","default:desert_stone","default:desert_stone"},
 }})
 minetest.register_craft({
   type="",
   output="ghostblocks:dirty_smoot",
-  {{"default:dirt","default:dirt","default:dirt"},
+  recipe = {{"default:dirt","default:dirt","default:dirt"},
   {"default:dirt","default:coalblock","default:dirt"},
   {"default:dirt","default:dirt","default:dirt"},
 }})
 minetest.register_craft({
   type="",
   output="ghostblocks:sandy_smoot",
-  {{"default:sand","default:sand","default:sand"},
+  recipe = {{"default:sand","default:sand","default:sand"},
   {"default:sand","default:coalblock","default:sand"},
   {"default:sand","default:sand","default:sand"},
 }})
 minetest.register_craft({
   type="",
   output="ghostblocks:compressed_stone",
-  {{"default:stone","default:stone","default:stone"},
+  recipe = {{"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"}
 }})
 minetest.register_craft({
   type="",
   output="ghostblocks:nature",
-  {{"group:compressedghost","group:compressedghost","group:compressedghost"},
+  recipe = {{"group:compressedghost","group:compressedghost","group:compressedghost"},
   {"group:compressedghost","group:smoot_stone","group:compressedghost"},
   {"group:compressedghost","group:compressedghost","group:compressedghost"},
 }})
 minetest.register_craft({
   type="shapeless",
   output="ghostblocks:g-essence",
-  {"ghostblocks:natural"},
+  recipe = {"ghostblocks:natural"},
 })
 --[[
 minetest.register_node("ghostblocks:ghost_converter"{
