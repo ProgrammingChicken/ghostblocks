@@ -46,7 +46,7 @@ for i=1, 30 do
   })
 end
 
-block ={"natural", "desert_smootstone", "smootstone", "dirtysmoot", "sandysmoot",}
+block ={"gnatural", "gsmoot_desert_stone", "gsmoot_stone", "gdirty_smoot", "gsandy_smoot",}
 texture ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
 
 for i=1, 30 do
