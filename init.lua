@@ -32,7 +32,7 @@ l="block"
 block={"dirt", "dirt_with_grass", "clay", "sand", "gravel", "cobble", "mossycobble", "stone", b.."coal", b.."iron", b.."diamond", b.."mese", b.."copper", b.."gold", "coal"..l, "steel"..l, "diamond"..l, "mese", "copper"..l, "gold"..l, "bronze"..l, "stonebrick", "desert_cobble", "desert_sand", "desert_stonebrick", "desert_stone", "sandstone", "sandstonebrick", "obsidian", "obsidianbrick", "snowblock",}
 texture={"dirt", "grass", "clay", "sand", "gravel", "cobble", "mossycobble", "stone", t.."coal", t.."iron", t.."diamond", t.."mese", t.."copper", t.."gold", "coal_"..l, "steel_"..l, "diamond_"..l, "mese_"..l, "copper_"..l, "gold_"..l, "bronze_"..l, "stone_brick", "desert_cobble", "desert_sand", "desert_stone_brick", "desert_stone", "sandstone", "sandstone_brick", "obsidian", "obsidian_brick", "snow_block",}
 
---ghostblock node registration loop
+--ghostblock node registration loops
 for i=1, 30 do
   if block[i] == nil then
     break
@@ -46,8 +46,8 @@ for i=1, 30 do
   })
 end
 
-block ={"desert_smootstone", "smootstone", "dirtysmoot", "sandysmoot",}
-texture ={"smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
+block ={"natural", "desert_smootstone", "smootstone", "dirtysmoot", "sandysmoot",}
+texture ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
 
 for i=1, 30 do
   if block[i] == nil then
