@@ -126,56 +126,48 @@ minetest.register_craftitem("ghostblocks:g_essence", {
 })
 --ghost-essence recipes
 minetest.register_craft({
-  type="",
   output="ghostblocks:compressed_dirt",
   recipe = {{"default:dirt","default:dirt","default:dirt"},
   {"default:dirt","default:dirt","default:dirt"},
   {"default:dirt","default:dirt","default:dirt"},
 }})
 minetest.register_craft({
-  type="",
   output="ghostblocks:compressed_sand",
   recipe = {{"default:sand","default:sand","default:sand"},
   {"default:sand","default:sand","default:sand"},
   {"default:sand","default:sand","default:sand"},
 }})
 minetest.register_craft({
-  type="",
   output="ghostblocks:compressed_stone",
   recipe = {{"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"},
 }})
 minetest.register_craft({
-  type="",
   output="ghostblocks:compressed_desertstone",
   recipe = {{"default:desert_stone","default:desert_stone","default:desert_stone"},
   {"default:desert_stone","default:desert_stone","default:desert_stone"},
   {"default:desert_stone","default:desert_stone","default:desert_stone"},
 }})
 minetest.register_craft({
-  type="",
   output="ghostblocks:dirty_smoot",
   recipe = {{"default:dirt","default:dirt","default:dirt"},
   {"default:dirt","default:coalblock","default:dirt"},
   {"default:dirt","default:dirt","default:dirt"},
 }})
 minetest.register_craft({
-  type="",
   output="ghostblocks:sandy_smoot",
   recipe = {{"default:sand","default:sand","default:sand"},
   {"default:sand","default:coalblock","default:sand"},
   {"default:sand","default:sand","default:sand"},
 }})
 minetest.register_craft({
-  type="",
   output="ghostblocks:compressed_stone",
   recipe = {{"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"},
   {"default:stone","default:stone","default:stone"}
 }})
 minetest.register_craft({
-  type="",
   output="ghostblocks:nature",
   recipe = {{"group:compressedghost","group:compressedghost","group:compressedghost"},
   {"group:compressedghost","group:smoot_stone","group:compressedghost"},
