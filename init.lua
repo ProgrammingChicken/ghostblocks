@@ -28,6 +28,7 @@ b="stone_with_"
 t="stone.png^default_mineral_"
 l="block"
 
+LOTT=false --set to true to enable LOTT blocks.
 --reference
 block={"dirt", "dirt_with_grass", "clay", "sand", "gravel", "cobble", "mossycobble", "stone", b.."coal", b.."iron", b.."diamond", b.."mese", b.."copper", b.."gold", "coal"..l, "steel"..l, "diamond"..l, "mese", "copper"..l, "gold"..l, "bronze"..l, "stonebrick", "desert_cobble", "desert_sand", "desert_stonebrick", "desert_stone", "sandstone", "sandstonebrick", "obsidian", "obsidianbrick", "snowblock",}
 texture={"dirt", "grass", "clay", "sand", "gravel", "cobble", "mossycobble", "stone", t.."coal", t.."iron", t.."diamond", t.."mese", t.."copper", t.."gold", "coal_"..l, "steel_"..l, "diamond_"..l, "mese_"..l, "copper_"..l, "gold_"..l, "bronze_"..l, "stone_brick", "desert_cobble", "desert_sand", "desert_stone_brick", "desert_stone", "sandstone", "sandstone_brick", "obsidian", "obsidian_brick", "snow_block",}
@@ -37,7 +38,7 @@ for i=1, 30 do
   if block[i] == nil then
     break
   end
-  minetest.register_node("ghostblocks:"..block[i], {
+  minetest.register_node("ghostblocks:g_"..block[i], {
     walkable=false,
     tiles={"default_"..texture[i]..".png"},
     drop = "ghostblocks:"..block[i],
@@ -46,20 +47,38 @@ for i=1, 30 do
   })
 end
 
-block ={"gnatural", "gsmoot_desert_stone", "gsmoot_stone", "gdirty_smoot", "gsandy_smoot",}
+if LOTT then
+  block = {}
+  texture = {{"lottplants_alderwood.png"}, }
+
+  for i=1, 30 do
+    if block[i] == nil then
+      break
+    end
+    minetest.register_node("ghostblocks:g_"..block[i], {
+      walkable=false,
+      tiles=texture[i],
+      drop = "ghostblocks:g_"..block[i],
+      diggable = true,
+      groups = {cracky=3, stone=1},
+    })
+  end
+end
+block ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
 texture ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
 
 for i=1, 30 do
   if block[i] == nil then
     break
   end
-  minetest.register_node("ghostblocks:"..block[i], {
+  minetest.register_node("ghostblocks:g_"..block[i], {
     walkable=false,
     tiles={"ghostblocks_"..texture[i]..".png"},
-    drop = "ghostblocks:"..block[i],
+    drop = "ghostblocks:g_"..block[i],
     diggable = true,
     groups = {cracky=3, stone=1},
   })
+  minetest.register_craft("ghostblocks:g_")
 end
 
 --ghost-essence materials
