@@ -26,6 +26,7 @@ just gimme creds yo
 --config (LOTT does nothing atm)
 craftable=true
 LOTT=false
+special=true
 
 --shortcuts
 b="stone_with_"
@@ -80,20 +81,35 @@ if LOTT then
     })
   end
 end
-block ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
-texture ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
 
-for i=1, 30 do
+if special then
+  block ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
+  texture ={"natural", "smoot_desert_stone", "smoot_stone", "dirty_smoot", "sandy_smoot",}
+  
+  for i=1, 30 do
+    if block[i] == nil then
+      break
+    end
+    minetest.register_node("ghostblocks:g_"..block[i], {
+      walkable=false,
+      tiles={"ghostblocks_"..texture[i]..".png"},
+      drop = "ghostblocks:g_"..block[i],
+      diggable = true,
+      groups = {cracky=3, stone=1},
+    })
+end
+if craftable then
+  for i=1, 30 do
   if block[i] == nil then
     break
   end
-  minetest.register_node("ghostblocks:g_"..block[i], {
-    walkable=false,
-    tiles={"ghostblocks_"..texture[i]..".png"},
-    drop = "ghostblocks:g_"..block[i],
-    diggable = true,
-    groups = {cracky=3, stone=1},
+  minetest.register_craft({
+    type = "shapeless",
+    output = "ghostblocks:g_"..block[i].." 99",
+    recipe = {"ghostblocks:"..block[i], "ghostblocks:g_essence"}
   })
+end
+end
 end
 
 --ghost-essence materials
